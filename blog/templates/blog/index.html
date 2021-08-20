@@ -1,0 +1,41 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block title %}My Blog{% endblock %}
+
+{% block css_files %}
+  <link rel="stylesheet" href="{% static "blog/post.css" %}"/>
+  <link rel="stylesheet" href="{% static "blog/index.css" %}"/>    
+{% endblock %}
+
+{% block content %}
+<section id="welcome">
+  <header>
+    <img src="{% static "blog/images/avatar.jpg" %}" alt="Fatih - The Author of This Blog" />
+    <h2>FATIH'S BLOG</h2>
+  </header>
+  <p>Hi, I am Fatih and I love to blog about tech and the world!</p>
+</section>
+
+<section id="latest-posts">
+  <h2>My Latest Posts</h2>
+  <ul>
+    {% for post in posts %}
+      {% include "blog/includes/post.html" %}
+    {% endfor %}
+  </ul>
+</section>
+
+<section id="about">
+  <h2>What I Do</h2>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et metus a
+    purus dapibus tristique in ut augue.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et metus a
+    purus dapibus tristique in ut augue.
+  </p>
+</section>
+
+{% endblock %}
