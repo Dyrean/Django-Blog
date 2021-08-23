@@ -1,43 +1,51 @@
 .post {
-display: flex;
-flex-direction: column;
-align-items: center;
-text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
 }
 
+.post p {
+  text-align: justify;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 .post a {
-text-decoration: none;
-color: black;
-transition: all 0.2s ease;
-padding: 1rem;
+  text-decoration: none;
+  color: black;
+  transition: all 0.2s ease;
+  padding: 1rem;
 }
 
 .post a:hover,
 .post a:active {
-transform: scale(1.1);
-background-color: #390281;
-color: white;
+  transform: scale(1.1);
+  background-color: #390281;
+  color: white;
 }
 
 .post img {
-width: 5rem;
-height: 5rem;
-object-fit: cover;
-border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .post h3 {
-margin: 0.25rem 0;
+  margin: 0.25rem 0;
 }
 
 .post time {
-color: #666666;
-margin: 0.25rem;
-font-style: italic;
-font-size: 0.85rem;
+  color: #666666;
+  margin: 0.25rem;
+  font-style: italic;
+  font-size: 0.85rem;
 }
 
 .post:hover time,
 .post:active time {
-color: white;
+  color: white;
 }
